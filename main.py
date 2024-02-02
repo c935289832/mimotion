@@ -6,8 +6,8 @@ from urllib.parse import urlencode
 
 import requests
 
-name = ["1111@chacuo.net", "2222@chacuo.net", "3333@chacuo.net", "4444@chacuo.net", "5555@chacuo.net", "6666@chacuo.net", "7777@chacuo.net"]
-pwd = "z1234567"
+name = os.environ.get("user").split('#')
+pwd = os.environ.get("pwd")
 content = ""
 
 for s in name:
@@ -26,7 +26,7 @@ try:
     token = "f8d4de22c93341729dc08c3e9dd79636"
     title = datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " 刷步数通知"
     data = {
-        "token": token,
+        "token": os.environ.get("token"),
         "title": title,
         "content": content,
         "template": "html",
