@@ -34,7 +34,6 @@ def execute():
     
     try:
         pushUrl = "https://www.pushplus.plus/send/"
-        token = "f8d4de22c93341729dc08c3e9dd79636"
         title = datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " 刷步数通知"
         data = {
             "token": PUSH_PLUS_TOKEN,
