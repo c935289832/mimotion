@@ -3,9 +3,17 @@ import random
 import time
 from datetime import datetime
 from urllib.parse import urlencode
+
 import os
+import time
 
 import requests
+
+# 获取北京时间
+def get_beijing_time():
+    target_timezone = pytz.timezone('Asia/Shanghai')
+    # 获取当前时间
+    return datetime.now().astimezone(target_timezone)
 
 def execute():
     name = users.split('#')
