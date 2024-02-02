@@ -6,7 +6,6 @@ from urllib.parse import urlencode
 import pytz
 
 import os
-import time
 
 import requests
 
