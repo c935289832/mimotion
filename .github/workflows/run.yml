@@ -25,9 +25,6 @@ jobs:
       - name: 开始
         env:
             CONFIG: ${{ secrets.CONFIG }}
-            user: ${{ secrets.USER }}
-            pwd: ${{ secrets.PWD }}
-            token: ${{ secrets.PUSHPLUS_TOKEN }}
         run: |
           pip3 install requests pytz
           python3 main.py
